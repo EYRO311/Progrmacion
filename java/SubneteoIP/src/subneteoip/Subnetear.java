@@ -1,6 +1,5 @@
 
 package subneteoip;
-
 /**
  *
  * @author emist

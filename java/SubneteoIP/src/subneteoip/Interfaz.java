@@ -27,6 +27,7 @@ public class Interfaz extends javax.swing.JFrame {
         spnNRedes = new javax.swing.JSpinner();
         txtIp = new javax.swing.JTextField();
         btnSubnetear = new javax.swing.JButton();
+        btnlimpiar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,6 +46,8 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
 
+        btnlimpiar.setText("limpiar pantalla");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -61,6 +64,8 @@ public class Interfaz extends javax.swing.JFrame {
                 .addContainerGap(441, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addComponent(btnSubnetear)
+                .addGap(164, 164, 164)
+                .addComponent(btnlimpiar)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addComponent(jScrollPane1)
         );
@@ -76,7 +81,9 @@ public class Interfaz extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(spnNRedes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
-                .addComponent(btnSubnetear)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSubnetear)
+                    .addComponent(btnlimpiar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE))
         );
@@ -171,6 +178,7 @@ public class Interfaz extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSubnetear;
+    private javax.swing.JButton btnlimpiar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
