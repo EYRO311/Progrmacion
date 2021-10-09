@@ -111,6 +111,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="limpiar pantalla"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnlimpiarActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

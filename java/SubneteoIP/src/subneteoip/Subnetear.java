@@ -1,5 +1,9 @@
 
+
 package subneteoip;
+
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author emist
@@ -23,7 +27,8 @@ public class Subnetear {
         this.nRedes = nRedes;
         this.clase = clase;
         long ipDecimal = ipToLong(red);
-        System.out.println("IP A DECIMAL: "+ipDecimal);
+        //System.out.println("IP A DECIMAL: "+ipDecimal);
+        JOptionPane.showMessageDialog(null,"IP A DECIMAL: "+ipDecimal );
         obtenerMascaraBits();
         resultadoUno += "IP RED: " + red + " /" + bitsDerecha+"\n";
         resultadoUno += "SUBREDES: " + getNRedes() + "\n";
@@ -41,7 +46,8 @@ public class Subnetear {
             resultadoUno += i + "\t";
             resultadoUno += ipred + "\t";
             String ipinicial = convertirBitsaIP(Suma("1", IPaBits(ipred)));
-            System.out.println("Suma:" + ipinicial);
+            //System.out.println("Suma:" + ipinicial);
+            JOptionPane.showMessageDialog(null,"Suma:" + ipinicial);
             resultadoUno += ipinicial + "\t";
             String broadcast = convertirBitsaIP(Suma(getBitsSuma(), IPaBits(ipred)));
             String ipfinal = convertirBitsaIP(Resta(IPaBits(broadcast), "1"));
@@ -58,7 +64,8 @@ public class Subnetear {
         for (int i = 0; i < bitsIzquierda; i++) {
             x += "1";
         }
-        System.out.println("bitsizquierda: "+x);
+        //System.out.println("bitsizquierda: "+x);
+        JOptionPane.showMessageDialog(null,"bitsizquierda: "+x);
         return x;
     }
 
@@ -157,7 +164,8 @@ public class Subnetear {
         String binaryOctet = "";
         int octet = Integer.parseInt(nRedes);
         String r = Integer.toBinaryString(octet - 1);
-        System.out.println("NBits:" + r.length() + "");
+        //System.out.println("NBits:" + r.length() + "");
+        JOptionPane.showMessageDialog(null,"NBits:" + r.length() + "");
         return r.length();
     }
 

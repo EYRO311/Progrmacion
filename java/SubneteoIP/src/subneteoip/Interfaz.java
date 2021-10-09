@@ -47,6 +47,11 @@ public class Interfaz extends javax.swing.JFrame {
         });
 
         btnlimpiar.setText("limpiar pantalla");
+        btnlimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnlimpiarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -107,6 +112,10 @@ public class Interfaz extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_btnSubnetearActionPerformed
+
+    private void btnlimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlimpiarActionPerformed
+        txtRes.setText("");
+    }//GEN-LAST:event_btnlimpiarActionPerformed
     
     public boolean validarIP(String cadena) {
         boolean x = false;
